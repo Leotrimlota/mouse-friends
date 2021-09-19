@@ -19,7 +19,8 @@
   "homepage": "https://github.com/Leotrimlota/mouse-friends#readme",
   "dependencies": {
     "express": "^4.17.1",
-    "express-handlebars": "^5.3.3"
+    "express-handlebars": "^5.3.3",
+    "socket.io": "^4.2.0"
   },
   "devDependencies": {
     "nodemon": "^2.0.12"
