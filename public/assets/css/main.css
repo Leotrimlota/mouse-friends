@@ -4,4 +4,6 @@ body {
 }
 .mouse {
     pointer-events: none;
+    height : 10px;
+    position: absolute;
 }
