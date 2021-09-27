@@ -7,3 +7,8 @@ body {
     height : 10px;
     position: absolute;
 }
+
+.fa-mouse-pointer{
+    position: absolute;
+    pointer-events: none;
+}

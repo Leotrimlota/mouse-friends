@@ -11,20 +11,9 @@ function pointerMove(){
 }
 
 
-socket.on('createMouse',()=>{
-    var img = document.createElement("img");
-    img.src = "assets/img/cursor.png";
-    img.id = socket.id;
-    img.className = "mouse";
-    document.body.appendChild(img);
-})
 
 socket.on('createCursor',(id)=>{
-    var img = document.createElement("img");
-    img.src = "assets/img/cursor.png";
-    img.id = id;
-    img.className = "mouse";
-    document.body.appendChild(img);
+    createCursor(id);
 })
 
 socket.emit('join')
@@ -41,11 +30,11 @@ socket.on('mouseMoved',(id,y,x)=>{
 
 function createCursor(id){
     if(!document.getElementById(id)){
-    var img = document.createElement("img");
-    img.src = "assets/img/cursor.png";
-    img.id = id;
-    img.className = "mouse";
-    document.body.appendChild(img);
+    var mousePointer = document.createElement("i");
+    mousePointer.id = id;
+    mousePointer.className = "fas fa-mouse-pointer";
+    mousePointer.style.color = uniqolor(id).color;
+    document.body.appendChild(mousePointer);
     }
 }
 
