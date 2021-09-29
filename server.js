@@ -1,12 +1,13 @@
 const express = require('express');
 var exphbs = require('express-handlebars');
+require('dotenv').config();
 const app = express();
 app.use(express.static('./public'))
 
 const server = require('http').createServer(app);
 const io = require('socket.io')(server, {
     cors: {
-        origin: "http://127.0.0.1:3000",
+        origin: process.env.HOST,
         methods: ["GET", "POST"]
     }
 });
@@ -35,5 +36,5 @@ io.on('connection', socket => {
 
 
 server.listen(3000, () => {
-    console.log('The server started on: 127.0.0.1:3000');
+    console.log(`The server started on: ${process.env.HOST}`);
 });
