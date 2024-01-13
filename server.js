@@ -31,6 +31,9 @@ io.on('connection', socket => {
     socket.on("disconnect", () => {
         io.to('ground').emit('disconnected', socket.id);
     });
+    socket.on('moveBall', (newX, newY) => {
+        io.to('ground').emit('ballMoved', newX, newY);
+    });
 });
 
 

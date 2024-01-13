@@ -12,3 +12,8 @@ body {
     position: absolute;
     pointer-events: none;
 }
+#ball {
+    position: absolute;
+    border-radius: 50%;
+    /* Other styling as needed */
+}
